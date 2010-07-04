@@ -1,0 +1,7 @@
+LICENSE
+Manifest
+README.rdoc
+Rakefile
+lib/range_operators.rb
+lib/rangify.rb
+spec/range_operators_spec.rb
