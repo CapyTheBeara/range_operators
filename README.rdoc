@@ -4,10 +4,11 @@ This gem will mixin range operations into Ruby's Range and Array classes.
 
 	Range Methods::	Addition and subtraction
 	
-	Array Methods:: Combining elements into ranges, determining intersection of elements, and determining missing elements
+	Array Methods:: Combining elements into ranges, determining intersection of elements,
+									and determining missing elements
 
 It assumes inclusive ranges (ie. 1..4) and range.first <= range.last.
-Also, the objects amking up the ranges must have #succ and #<=> methods.
+Also, the objects making up the ranges must have #succ and #<=> methods.
 
 = Usage
 
