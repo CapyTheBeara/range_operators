@@ -1,4 +1,4 @@
-require 'lib/range_operators'
+require 'spec_helper'
 
 describe Array do
 	describe '#missing' do
