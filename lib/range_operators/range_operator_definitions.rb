@@ -24,18 +24,18 @@ module RangeOperators
 		protected
 		
 		def minus_obj(value)
-			first = case value <=> self.first.succ
+			first = case value <=> self.first + 1
 			when -1 then nil
 			when 0 then self.first
 			else
-				value < self.last.succ ? self.first..(value - 1) : self
+				value < self.last + 1 ? self.first..(value - 1) : self
 			end
 
-			second = case self.last <=> value.succ
+			second = case self.last <=> value + 1
 			when -1 then nil
 			when 0 then self.last
 			else
-				value.succ > self.first ? value.succ..self.last : self
+				value + 1 > self.first ? value + 1..self.last : self
 			end
 
 			[first, second]

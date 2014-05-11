@@ -24,7 +24,7 @@ module RangeOperators
 					last = collection.last
 					last_value = comparison_value(last, :last)
 					current_value = comparison_value(value, :first)
-					if (last_value.succ <=> current_value) == -1
+					if (last_value + 1 <=> current_value) == -1
 						collection << value
 					else
 						first = comparison_value(last, :first)
@@ -65,7 +65,7 @@ module RangeOperators
 			while i < length 
 				current = comparison_value(array[i], :last)
 				nextt = comparison_value(array[i+1], :first)
-				missing << (current.succ.succ == nextt ? current.succ : (current.succ)..(nextt - 1))
+				missing << (current + 2 == nextt ? current + 1 : (current + 1)..(nextt - 1))
 				i += 1
 			end
 			missing
